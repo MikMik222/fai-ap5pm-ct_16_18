@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nastav data</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-select interface="popover" placeholder="Vyber zemi" (ionChange)="ChangeData();" [(ngModel)]="indexcity">
+        <ion-select-option value="{{item.id}}" *ngFor="let item of places">{{item.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <form [formGroup]="specPSC" (ngSubmit)="save()" novalidate>
+    <ion-item>
+      <ion-label position="floating">PSČ</ion-label>
+      <ion-input formControlName="psc" placeholder="{{hint}}" [(ngModel)]="psc"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" expand="block" [disabled]="!specPSC.valid">Vyhledej</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+
+</ion-content>

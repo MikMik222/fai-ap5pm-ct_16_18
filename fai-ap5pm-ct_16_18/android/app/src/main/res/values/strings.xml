@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PSČ finder</string>
+    <string name="title_activity_main">PSČ finder</string>
+    <string name="package_name">io.ionic.pscfind</string>
+    <string name="custom_url_scheme">io.ionic.pscfind</string>
+</resources>

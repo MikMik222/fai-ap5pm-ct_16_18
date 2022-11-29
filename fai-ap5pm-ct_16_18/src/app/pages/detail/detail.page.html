@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>{{mesto.country}} - {{mesto["post code"]}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let item of mesto.places">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{item["place name"]}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content class="ion-no-padding">
+        <ion-card class="ion-no-padding">
+          State: {{item.state}}
+          <ion-card-header>
+            <ion-card-title>Zeměpisné souřadnice</ion-card-title>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Zeměpisná šířka: {{item.latitude}}<br>
+            Zeměpisná délka: {{item.longitude}}
+          </ion-card-content>
+
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
