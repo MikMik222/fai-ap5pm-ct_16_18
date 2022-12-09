@@ -1,6 +1,6 @@
 {
-  "name": "Weather app",
-  "short_name": "Weather",
+  "name": "PSČ finder",
+  "short_name": "PSČ",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
